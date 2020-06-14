@@ -19,21 +19,70 @@ public class Patient {
 	@Column(name="name")
 	String name;
 	
-	@Column(name="age")
-	int age;
-	
 	public Patient() {
 		super();
 	}
-	public Patient(Long id, String name, int age, String gender, Long accessionNumber, Date dob) {
+
+	public Patient(String name, int age, String gender, Long accessionNumber, Date dob) {
 		super();
-		this.id = id;
 		this.name = name;
 		this.age = age;
 		this.gender = gender;
 		this.accessionNumber = accessionNumber;
 		this.dob = dob;
 	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public Long getAccessionNumber() {
+		return accessionNumber;
+	}
+
+	public void setAccessionNumber(Long accessionNumber) {
+		this.accessionNumber = accessionNumber;
+	}
+
+	public Date getDob() {
+		return dob;
+	}
+
+	public void setDob(Date dob) {
+		this.dob = dob;
+	}
+
+	@Column(name="age")
+	int age;
+	
 	@Column(name="gender", length = 1)
 	String gender;
 	
@@ -42,42 +91,4 @@ public class Patient {
 	
 	@Column(name="dob")
 	Date dob;
-	
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public int getAge() {
-		return age;
-	}
-	public void setAge(int age) {
-		this.age = age;
-	}
-	public String getGender() {
-		return gender;
-	}
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-	public Long getAccessionNumber() {
-		return accessionNumber;
-	}
-	public void setAccessionNumber(Long accessionNumber) {
-		this.accessionNumber = accessionNumber;
-	}
-	public Date getDob() {
-		return dob;
-	}
-	public void setDob(Date dob) {
-		this.dob = dob;
-	}
-	
 }

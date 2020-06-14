@@ -28,7 +28,7 @@ public class MedicationService implements IMedicationService{
 
 	@Override
 	public boolean saveMedsInformation(Medication medsDetails) {
-		// TODO Auto-generated method stub
+		medicationRepository.save(medsDetails);
 		return false;
 	}
 	

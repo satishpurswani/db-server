@@ -20,6 +20,17 @@ public class Medication {
 	
 	private Date expiryDate;
 
+	public Medication() {
+		super();
+	}
+
+	public Medication(String name, String batchNo, Date expiryDate) {
+		super();
+		this.name = name;
+		this.batchNo = batchNo;
+		this.expiryDate = expiryDate;
+	}
+
 	public Long getId() {
 		return id;
 	}
